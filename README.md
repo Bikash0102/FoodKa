@@ -8,6 +8,7 @@
 
 - Add to cart functionality
 - Shopping cart functionality
+  -product category functionality
 - Product Filtering functionality
 - Product page
 - Cart and checkout page
