@@ -1,23 +1,22 @@
 
 import React, { useState } from "react";
 import Helmet from "../components/Helmet/Helmet";
-import CommonSection from "../components/UI/common-section/CommonSection";
+
 
 import { Container, Row, Col } from "reactstrap";
-
+import { useEffect } from "react";
 import products from "../assets/fake-data/products";
 import ProductCard from "../components/UI/product-card/ProductCard";
-import ReactPaginate from "react-paginate";
 
 import "../styles/all-foods.css";
 import "../styles/pagination.css";
 
 const Foodpages = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const[allproducts,setproduct]=useState(products);
+ 
 
-  const [pageNumber, setPageNumber] = useState(0);
-
-  const searchedProduct = products.filter((item) => {
+  const searchedProduct = allproducts.filter((item) => {
     if (searchTerm === "") {
       return item;
     }
@@ -28,18 +27,47 @@ const Foodpages = () => {
     }
   });
 
-//   const productPerPage = 8;
-//   const visitedPage = pageNumber * productPerPage;
-//   const displayPage = searchedProduct.slice(
-//     visitedPage,
-//     visitedPage + productPerPage
-//   );
+  
 
-//   const pageCount = Math.ceil(searchedProduct.length / productPerPage);
+  const [value, setValue] = useState('BRIYANI');
 
-//   const changePage = ({ selected }) => {
-//     setPageNumber(selected);
-//   };
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+  
+  
+  useEffect(()=>
+  { 
+      if(value==='BRIYANI')
+      {
+        const newproduct=products.filter((item)=>item.category==='Briyani')
+          setproduct(newproduct);
+      }
+          
+      if(value==='ICECREAM')
+      {
+          const newproduct=products.filter((item)=>item.category==='Icecream')
+          setproduct(newproduct);
+          
+      }
+      if(value==='PIZZA')
+      {
+          const newproduct=products.filter((item)=>item.category==='Pizza')
+          
+          setproduct(newproduct);
+          
+      }
+      if(value==='MILK')
+      {
+          const newproduct=products.filter((item)=>item.category==='Milk')
+          setproduct(newproduct);
+          
+      }
+     
+
+  },[value])
+
+
 
   return (
     <Helmet title="All-Foods">
@@ -64,12 +92,12 @@ const Foodpages = () => {
             </Col>
             <Col lg="6" md="6" sm="6" xs="12" className="mb-5">
               <div className="sorting__widget text-end">
-                <select className="w-50">
-                  <option>Default</option>
-                  <option value="ascending">Alphabetically, A-Z</option>
-                  <option value="descending">Alphabetically, Z-A</option>
-                  <option value="high-price">High Price</option>
-                  <option value="low-price">Low Price</option>
+                <select value={value} onChange={handleChange} className="w-50">
+
+                  <option value="BRIYANI">Briyani</option>
+                  <option value="ICECREAM">Icecream</option>
+                  <option value="PIZZA">Pizza</option>
+                  <option value="MILK">Milkshakes</option>
                 </select>
               </div>
             </Col>
@@ -80,15 +108,7 @@ const Foodpages = () => {
               </Col>
             ))}
 
-            {/* <div>
-              <ReactPaginate
-                pageCount={pageCount}
-                onPageChange={changePage}
-                previousLabel={"Prev"}
-                nextLabel={"Next"}
-                containerClassName=" paginationBttns "
-              />
-            </div> */}
+            
           </Row>
         </Container>
       </section>

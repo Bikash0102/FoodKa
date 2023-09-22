@@ -26,7 +26,7 @@ const nav__links = [
   },
   {
     display: "Contact",
-    path: "/contact",
+    path: "/footer",
   },
 ];
 
