@@ -28,6 +28,7 @@
   .search__widget input {
     width: 100%;
     font-size: 0.8rem;
+    height: 39px;
   }
   .sorting__widget select {
     width: 100% !important;

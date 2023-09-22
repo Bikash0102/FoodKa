@@ -135,7 +135,7 @@ section {
     width: 50px;
     display: block;
     height: 60px;
-    padding: 10px 20px;
+    padding: 10px 64px;
     position: absolute;
     top: 0.5rem;
     right: 0rem;
@@ -144,7 +144,7 @@ section {
 
   .header__closeButton span i {
     font-size: 1.1rem;
-    background: #000000;
+    background: #d80606;
     padding: 5px;
     border-radius: 50%;
     color: #fff;

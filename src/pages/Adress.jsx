@@ -23,7 +23,7 @@ const Adress = () => {
         <Container>
           <Row>
             <Col lg="8" md="6">
-            <div class="wrapper">
+            <div class="wrappers">
 			<div class="inner">
 				<img src="images/image-1.png" alt="" class="image-1"/>
 				<form action="">
@@ -53,7 +53,7 @@ const Adress = () => {
 						<textarea  type="text" class="form-control3" placeholder="adress"/>
 					</div>
 					
-                    <Link className="button" to="/checkout">Place Your Order</Link>
+                    <Link className="buttons" to="/checkout">Place Your Order</Link>
                   
                     
 				</form>

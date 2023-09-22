@@ -19,11 +19,11 @@ const Carts = () => {
   return (
     <div className="cart__container" onClick={toggleCart}>
       <ListGroup onClick={(event) => event.stopPropagation()} className="cart">
-        <div className="cart__closeButton">
-          <span onClick={toggleCart}>
-            <i className="ri-close-fill"></i>
-          </span>
-        </div>
+      <div className="header__closeButton">
+                <span onClick={toggleCart}>
+                  <i className="ri-close-fill"></i>
+                </span>
+              </div>
 
         <div className="cart__item-list">
           {cartProducts.length === 0 ? (
