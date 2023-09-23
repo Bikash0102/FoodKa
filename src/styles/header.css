@@ -10,7 +10,7 @@ section {
   width: 100%;
   height: 80px;
   line-height: 100px;
-  background-color: #9139397d;
+  background-color: #231a8f00;
   top: 0;
 }
 
@@ -161,12 +161,12 @@ section {
     width: 100%;
     height: 80px;
     line-height: 80px;
-    background-color: #9139397d;
+    background-color: #231a8f00;
   }
 
   .logo img {
-    margin-top: 22px;
-    width: calc(100% - 70%);
+    margin-top: 25px;
+    width: calc(100% - 65%);
   }
 }
 

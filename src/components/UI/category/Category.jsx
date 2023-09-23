@@ -32,7 +32,7 @@ const categoryData = [
 
 const Category = () => {
   return (
-    <div className=".container-fluid">
+    <div className=".container-fluid p-2">
       <Row>
         {categoryData.map((item, index) => (
           <Col lg="6" md="6" sm="7" xs="6" className="mb-4 mr-2" key={index}>

@@ -10,6 +10,7 @@ import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Adress from "../pages/Adress";
+import Odertrack from "../pages/Odertrack";
 const Routers = () => {
   return (
     <Routes>
@@ -23,7 +24,9 @@ const Routers = () => {
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/tracking" element={<Tracking/>} />
       <Route path="/adress" element={<Adress/>}/>
+      <Route path="/ordertrack" element={<Odertrack/>}/>
       <Route path="/pizzas/:id" element={<PizzaDetails />} />
+
     </Routes>
   );
 };

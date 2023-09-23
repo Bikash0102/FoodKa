@@ -18,7 +18,7 @@
   background: #f54d19;
   text-align: center;
   margin-top: 30px;
-  padding: 20px 0px;
+  padding: 20px 10px;
   border-radius: 100px;
 }
 
@@ -82,6 +82,25 @@
     font-size: 1rem;
   }
 
+  .food__category button {
+    border: none;
+    outline: none;
+    font-size: 0.7rem;
+
+    padding: 5px 17px 5px 2px;
+
+    background: transparent;
+    color: #fff;
+  }
+
+  .foodBtnActive {
+    background: #fff !important;
+    border-radius: 0px;
+    width: 130px;
+
+    color: #df2020 !important;
+  }
+
   .hero__content p {
     font-size: 0.8rem;
     line-height: 25px;
@@ -121,10 +140,6 @@
   .food__category {
     padding: 15px;
     border-radius: 5px;
-  }
-  .food__category button {
-    padding: 5px 15px;
-    font-size: 0.7rem;
   }
 
   .tasty__treat-desc {
