@@ -52,7 +52,7 @@ const Footer = () => {
 
           <Col lg="3" md="4" sm="6">
           <div className="social__links d-flex align-items-center gap-4 justify-content-end">
-          <h5 className="footer__title">Fallow</h5>
+          <h5 className="footer__title">Follow</h5>
               <span >
                 {" "}
                 <Link to="https://www.facebook.com/muhib160">
